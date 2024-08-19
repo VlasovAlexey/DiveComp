@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>micro:bit</title>
+        <script type="text/javascript" src="microbit.umd.js"></script>
+    </head>
+    <body>
+        <button id="connect">Connect</button>
+        <button id="compass">Compass</button>
+
+        <div id="log" style="white-space: pre" />
+        <script>
+            const logEl = document.getElementById("log");
+            const log = (message) => logEl.innerHTML = `${message}\n${logEl.innerHTML}`;
+            const logJson = (message) => log(JSON.stringify(message, null, 2));
+            const eventHandler = event => log(`${event.type}: ${JSON.stringify(event.detail, null, 2)}`);
+
+            document.getElementById("connect").onclick = async () => {
+                const device = await microbit.requestMicrobit(window.navigator.bluetooth);
+                if (device) {
+                    const services = await microbit.getServices(device);
+
+                    if (services.deviceInformationService) {
+                        logJson(await services.deviceInformationService.readDeviceInformation());
+                    }
+
+                    if (services.rpcService) {
+                        services.rpcService.addEventListener("receiveCommand", event => {
+                        let command = `command: ${event.command}`;
+                            if (e.value) {
+                                command = `${command}, value: ${event.value}`;
+                            }
+                            log(command);
+                        });
+                        await services.rpcService.narg();
+                    } else if (services.uartService) {
+                        services.uartService.addEventListener("receiveText", eventHandler);
+                        await services.uartService.send(new Uint8Array([104, 101, 108, 108, 111, 58])); // hello:
+                    }
+
+                    if (services.ledService) {
+                        await services.ledService.writeMatrixState([
+                            [1, 0, 1, 0, 0],
+                            [1, 1, 1, 1, 1],
+                            [0, 0, 1, 0, 0],
+                            [0, 1, 0, 1, 0],
+                            [1, 0, 0, 0, 1]
+                        ]);
+                        logJson(await services.ledService.readMatrixState());
+
+                        await services.ledService.setScrollingDelay(50);
+                        log(await services.ledService.getScrollingDelay());
+
+                        await services.ledService.writeText("Web BLE");
+                    }
+
+                    if (services.buttonService) {
+                        services.buttonService.addEventListener("buttonastatechanged", eventHandler);
+                        services.buttonService.addEventListener("buttonbstatechanged", eventHandler);
+                    }
+
+                    if (services.temperatureService) {
+                        await services.temperatureService.setTemperaturePeriod(2000);
+                        log(await services.temperatureService.getTemperaturePeriod());
+                        services.temperatureService.addEventListener("temperaturechanged", eventHandler);
+                    }
+
+                    if (services.accelerometerService) {
+                        await services.accelerometerService.setAccelerometerPeriod(640);
+                        log(await services.accelerometerService.getAccelerometerPeriod());
+                        services.accelerometerService.addEventListener("accelerometerdatachanged", eventHandler);
+                    }
+                }
+            }
+
+            document.getElementById("compass").onclick = async () => {
+                const device = await microbit.requestMicrobit(window.navigator.bluetooth);
+                if (device) {
+                    const services = await microbit.getServices(device);
+
+                    if (services.deviceInformationService) {
+                        logJson(await services.deviceInformationService.readDeviceInformation());
+                    }
+
+                    if (!services.magnetometerService) {
+                        log("No magnetometer service found");
+                        return;
+                    }
+
+                    const startMagnetometer = async () => {
+                        await services.magnetometerService.setMagnetometerPeriod(640);
+                        log(await services.magnetometerService.getMagnetometerPeriod());
+
+                        services.magnetometerService.addEventListener("magnetometerdatachanged", eventHandler);
+                        services.magnetometerService.addEventListener("magnetometerbearingchanged", eventHandler);
+                    };
+
+                    services.magnetometerService.addEventListener("magnetometercalibrationchanged", async response => {
+                        if (response.detail === 2) {
+                            await startMagnetometer();
+                        }
+                    });
+
+                    try {
+                        await services.magnetometerService.calibrate();
+                    } catch (e) {
+                        await startMagnetometer();
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
