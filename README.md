@@ -27,7 +27,7 @@ Want to contribute? The team encourages community feedback and contributions. Pl
 If Dive Computer is not working properly, please file a report in the [Facebook Project Page](). We also welcome issues submitted on GitHub.
 
 # Roadmap
-For information regarding Dive Computer plans and release schedule, please see the [Facebook DiveProMe+] ()
+For information regarding Dive Computer plans and release schedule, please see this page or email to Alexey Vlasov or Maxim Parinov.
 
 # Related Projects
 Many of the core components and extensions to Code live in their own repositories on GitHub. For example, the [JsPDF](https://github.com/MrRio/jsPDF) and the [JsXLSX](https://github.com/clarketm/js-xlsx) have their own repositories. Simply ask if you need more info.
