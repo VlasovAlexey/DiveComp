@@ -2,11 +2,11 @@
 [![Apache License](https://img.shields.io/badge/License-Apache2.0-blue.svg?style=for-the-badge)](http://www.apache.org/licenses/LICENSE-2.0)
 
 # Dive Computer
-Firstly please read carefully latest version online documentation [Dive Computer Documentation]()
+Firstly please read carefully latest version online documentation [Dive Computer Documentation](https://vlasovalexey.github.io/DiveComputer/doc/)
 
 # Features
 DIVE COMPUTER is an open platform for professional divers. Devices based on this platform can be used for a wide variety of diver needs.
-The DIVE COMPUTER platform is integrated into the [DiveProMe](https://vlasovalexey.github.io/DiveProMe/HTML_SRC/) and [Minotaur Cave Survey Software](https://vlasovalexey.github.io/Minotaur/HTML_SRC/).
+The DIVE COMPUTER platform is integrated into the [DiveProMe](https://vlasovalexey.github.io/DiveProMe/HTML_SRC/) and [Minotaur Cave Survey Software](https://vlasovalexey.github.io/Minotaur/HTML_SRC/)
 
 
 # Geting Started
