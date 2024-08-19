@@ -10,7 +10,7 @@ The DIVE COMPUTER platform is integrated into the [DiveProMe](https://vlasovalex
 
 
 # Geting Started
-- please read carefully latest version online documentation [Dive Computer Documentation]()
+- please read carefully latest version online documentation [Dive Computer Documentation](https://vlasovalexey.github.io/DiveComputer/doc/)
 - Really thats all :)
 
 # Browser compatibility
