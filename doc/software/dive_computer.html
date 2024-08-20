@@ -7,6 +7,16 @@
   <title>1. Dive Computer &mdash; Dive Computer v0.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -18,6 +28,14 @@
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script src="../_static/js/versionwarning.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -46,6 +64,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../general/what_is_this.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general/project_info.html">2. Project global information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general/faq.html">3. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/build_doc.html">4. How to Build Documentation Locally</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Hardware</span></p>
 <ul>
@@ -55,7 +74,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Software</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Dive Computer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Dive Computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">1.1. Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-project">1.2. Building the project</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="android_app.html">2. Android App for Dive Computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web_app.html">3. Web App for Dive Computer</a></li>
 </ul>
@@ -92,6 +115,49 @@
              
   <section id="dive-computer">
 <h1><span class="section-number">1. </span>Dive Computer<a class="headerlink" href="#dive-computer" title="Permalink to this heading"></a></h1>
+<p>These are the sources for flashing the DIVE COMPUTER board micro:bit as well.</p>
+<section id="dependencies">
+<h2><span class="section-number">1.1. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads">GNU Arm Embedded Toolchain</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com">Git</a></p></li>
+<li><p><a class="reference external" href="https://cmake.org/download/">CMake</a></p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python 3</a></p></li>
+<li><p><a class="reference external" href="https://ninja-build.org/">Ninja Build</a> (only needed on Windows)</p></li>
+</ul>
+<p>For example, to install these dependencies on Ubuntu 18.x:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install gcc</span>
+<span class="go">sudo apt install git</span>
+<span class="go">sudo apt install cmake</span>
+<span class="go">sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi</span>
+</pre></div>
+</div>
+</section>
+<section id="building-the-project">
+<h2><span class="section-number">1.2. </span>Building the project<a class="headerlink" href="#building-the-project" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Install the dependencies</p></li>
+<li><p>Clone this repository</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/VlasovAlexey/DiveComputer.git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In the root of this repository run the <code class="docutils literal notranslate"><span class="pre">build.py</span></code> script</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd DiveComputer/dive_computer/src</span>
+<span class="go">python3 build.py</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">MICROBIT.hex</span></code> hex file will be built and placed in the root folder.</p></li>
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">MICROBIT.hex</span></code> file into the <code class="docutils literal notranslate"><span class="pre">MICORBIT</span></code> USB drive to flash the micro:bit</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The DIVE COMPUTER sources run under CODAL. If you want to customize for Windows or MacOS you can read more about it <a class="reference external" href="https://github.com/lancaster-university/codal">here</a>.</p>
+</div>
+</section>
 </section>
 
 

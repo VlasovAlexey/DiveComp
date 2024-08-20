@@ -18,6 +18,7 @@ The DIVE COMPUTER platform is integrated into the popular DiveProMe and Minotaur
     general/what_is_this
     general/project_info
     general/faq
+    general/build_doc
 
 .. toctree::
     :maxdepth: 3

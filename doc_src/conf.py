@@ -33,3 +33,50 @@ html_logo = "_static/dive_computer_logo.svg"
 html_theme_options = {
   "style_nav_header_background" : "#40a9ed"
 }
+
+extensions = [
+  'myst_parser',
+  'breathe',
+  'sphinx.ext.duration',
+  'sphinx.ext.autodoc',
+  'sphinx.ext.autosummary',
+  'sphinx.ext.viewcode',
+  'sphinx_markdown_tables',
+  'hoverxref.extension',
+  'versionwarning.extension',
+  'sphinx_copybutton',
+  'sphinx_rtd_theme',
+]
+
+myst_enable_extensions = [
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "linkify",
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+]
+
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
+
+# A list of ignored prefixes for module index sorting.
+#modindex_common_prefix = []
+
+# If true, keep warnings as "system message" paragraphs in the built documents.
+#keep_warnings = False
+
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
