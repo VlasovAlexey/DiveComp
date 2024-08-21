@@ -17,6 +17,7 @@
       <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -34,6 +35,7 @@
         <script src="../_static/js/versionwarning.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/tabs.js"></script>
         <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -70,11 +72,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="required_parts.html">1. Required Parts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="required_parts.html#optional-parts">2. Optional Parts</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Waterproof Computer Body</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#organic-glass-3mm">3.1. Organic glass 3mm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#epoxy-resin">3.2. Epoxy resin</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Waterproof Computer Body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="assembling.html">4. Assembling</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Software</span></p>
@@ -116,12 +114,54 @@
              
   <section id="waterproof-computer-body">
 <h1><span class="section-number">3. </span>Waterproof Computer Body<a class="headerlink" href="#waterproof-computer-body" title="Permalink to this heading"></a></h1>
-<section id="organic-glass-3mm">
-<h2><span class="section-number">3.1. </span>Organic glass 3mm<a class="headerlink" href="#organic-glass-3mm" title="Permalink to this heading"></a></h2>
-</section>
-<section id="epoxy-resin">
-<h2><span class="section-number">3.2. </span>Epoxy resin<a class="headerlink" href="#epoxy-resin" title="Permalink to this heading"></a></h2>
-</section>
+<p>Then click the <span class="guilabel">Main Test</span> button to create the poject and open the.</p>
+<ol class="arabic simple">
+<li><p>Navigate back to the and click the <span class="guilabel">⚙ Admin</span> button,to open the Settings page.</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">.readthedocs.yaml</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="nt">build</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-22.04&quot;</span>
+<span class="w">  </span><span class="nt">tools</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
+</span>
+<span class="nt">python</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">install</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/requirements.txt</span>
+
+<span class="nt">sphinx</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">configuration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/source/conf.py</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Take into account that if the title changes, your <code class="docutils literal notranslate"><span class="pre">section</span></code> argument will break.
+To avoid that, you can manually define Sphinx references above the sections you don’t want to break.
+For example,</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">reStructuredText</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">MyST (Markdown)</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="c">.. in your .rst document file</span>
+
+<span class="hll"><span class="p">..</span> <span class="nt">_unbreakable-section-reference:</span>
+</span>
+<span class="gh">Creating an automation rule</span>
+<span class="gh">---------------------------</span>
+
+This is the text of the section.
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>.. in your .md document file
+
+<span class="hll">(unbreakable-section-reference)=
+</span><span class="gu">## Creating an automation rule</span>
+
+This is the text of the section.
+</pre></div>
+</div>
+</div></div>
+</div>
 </section>
 
 

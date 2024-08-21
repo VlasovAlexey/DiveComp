@@ -17,6 +17,7 @@ How to Build Documentation Locally
     $ pip install sphinx-hoverxref
     $ pip install sphinx-markdown-tables
     $ pip install sphinx_rtd_theme==1.1.1
+    $ pip install sphinx-tabs
 
 .. note::
 

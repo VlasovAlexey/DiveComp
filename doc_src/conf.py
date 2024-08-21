@@ -46,6 +46,7 @@ extensions = [
   'versionwarning.extension',
   'sphinx_copybutton',
   'sphinx_rtd_theme',
+  'sphinx_tabs.tabs',
 ]
 
 myst_enable_extensions = [
