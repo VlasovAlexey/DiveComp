@@ -6,8 +6,13 @@
 Welcome to Dive Computer documentation!
 ========================================
 
-DIVE COMPUTER is an open platform for professional divers. Devices based on this platform can be used for a wide variety of diver needs.
-The DIVE COMPUTER platform is integrated into the popular DiveProMe and Minotaur Cave Survey Software.
+DIVE COMPUTER is an open platform for professional and recreational certifed divers. Devices based on this platform can be used for a wide variety of diver needs.
+The DIVE COMPUTER platform is integrated into the popular `DiveProMe <https://vlasovalexey.github.io/DiveProMe/HTML_SRC/>`_ and `Minotaur <https://github.com/VlasovAlexey/Minotaur>`_ Cave Survey Software.
+
+
+.. figure:: /hardware/res/body_01.jpg
+    :width: 80%
+    :align: center
 
 .. toctree::
     :maxdepth: 3
@@ -49,10 +54,3 @@ The DIVE COMPUTER platform is integrated into the popular DiveProMe and Minotaur
     usages/examples
     usages/prototypes
     usages/underwater_operation
-
-Indices and tables
-==================
-
-
-* :ref:`genindex`
-* :ref:`search`
