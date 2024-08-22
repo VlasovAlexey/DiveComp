@@ -1,59 +1,48 @@
 Waterproof Computer Body
 ========================================
-Then click the :guilabel:`Main Test` button to create the poject and open the.
+By clicking on the :guilabel:`3D Printing Sorche` and :guilabel:`Industrial format` buttons below you can select the 3D DIVE COMPUTER enclosure variant that suits your requirements.
 
-#. Navigate back to the and click the :guilabel:`⚙ Admin` button,to open the Settings page.
+Working Files
+--------------------------------------
 
-
-.. code-block:: yaml
-   :caption: .readthedocs.yaml
-   :emphasize-lines: 6
-
-   version: 2
-
-   build:
-     os: "ubuntu-22.04"
-     tools:
-       python: "3.8"
-
-   python:
-     install:
-       - requirements: docs/requirements.txt
-
-   sphinx:
-     configuration: docs/source/conf.py
 
 
 .. tip::
 
-    Take into account that if the title changes, your ``section`` argument will break.
-    To avoid that, you can manually define Sphinx references above the sections you don't want to break.
-    For example,
+    If you are just beginning development we recommend that you start by placing all the parts of the DIVE COMPUTER in the printed version of the enclosure. This is cheap and will help you avoid assembly problems. The parts can be slightly larger or smaller. You may simply have wires and connections that are too long. We strongly recommend using 3D printing before final assembly.
 
     .. tabs::
 
-       .. tab:: reStructuredText
+       .. tab:: 3D Printing Sorche
 
-          .. code-block:: rst
-             :emphasize-lines: 3
+         Here are 3D printing files in popular formats for most known 3D Printers.
 
-             .. in your .rst document file
+         v_0.1
+         
+         .. figure:: /hardware/res/body_01.jpg
+            :width: 80%
+            :align: center
 
-             .. _unbreakable-section-reference:
+        :download:`Autodesk 3ds Max 2014 files </hardware/models/dive_computer_2014_Autodesk_3ds_Max_2014.zip>`
 
-             Creating an automation rule
-             ---------------------------
+        :download:`OBJ files </hardware/models/dive_computer_body_v_0_1_OBJ.zip>`
 
-             This is the text of the section.
+        :download:`STL files </hardware/models/dive_computer_body_v_0_1_STL.zip>`
+        
 
-       .. tab:: MyST (Markdown)
 
-          .. code-block:: md
-             :emphasize-lines: 3
+       .. tab:: Industrial format
 
-             .. in your .md document file
+         Here is the Solidworks 2024 or higher format. The project contains everything you need to prepare data for machine and milling operations.
+         
+         v_0.1
 
-             (unbreakable-section-reference)=
-             ## Creating an automation rule
+         .. figure:: /hardware/res/body_02.jpg
+            :width: 80%
+            :align: center
 
-             This is the text of the section.
+        :download:`WBREP files </hardware/models/dive_computer_body_v_0_1_WBREP.zip>`
+
+Blueprints         
+------------------------------------
+Drawings will be updated as needed. The latest files can be found at the links above in the Working Files section.

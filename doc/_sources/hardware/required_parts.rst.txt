@@ -10,9 +10,9 @@ Micro:bit is the heart of the platform. You must purchase version 2.x or higher.
    :width: 80%
    :align: center
 
-`Micro:bit Board <https://aliexpress.ru/item/1005006476134044.html?sku_id=12000037339603734&spm=a2g2w.productlist.search_results.0.521c4938lMswcc>`_
+`Micro:bit Board <https://aliexpress.ru/item/1005006770925860.html?sku_id=12000038242747711&spm=a2g2w.productlist.search_results.5.519f56932HXnlq>`_
 
-Price: $15-$20.
+Price: $13-$22.
 
 Buttons
 ----------------------------------------
@@ -22,7 +22,7 @@ You can use any stainless steel IP68 specification piezo button with a 12mm seat
    :width: 80%
    :align: center
 
-`Button <https://aliexpress.ru/item/1005003107169262.html?sku_id=12000024124060234&spm=a2g2w.productlist.search_results.12.5ae6f302LLHdFy>`_
+`Button <hardware/required_parts>`_
 
 Price: 3-4$
 
