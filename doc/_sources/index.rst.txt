@@ -8,7 +8,7 @@ Welcome to Dive Computer documentation!
 
 DIVE COMPUTER is an open platform for professional and recreational certifed divers. Devices based on this platform can be used for a wide variety of diver needs.
 The DIVE COMPUTER platform is integrated into the popular `DiveProMe <https://vlasovalexey.github.io/DiveProMe/HTML_SRC/>`_ and `Minotaur <https://github.com/VlasovAlexey/Minotaur>`_ Cave Survey Software.
-
+DIVE COMPUTER is a platform that allows you to turn your smartphone into a diving computer, a compass, a pathfinder in underwater caves, a cartographer.
 
 .. figure:: /hardware/res/body_01.jpg
     :width: 80%
