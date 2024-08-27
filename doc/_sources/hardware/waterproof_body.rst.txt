@@ -12,8 +12,26 @@ Working Files
     If you are just beginning development we recommend that you start by placing all the parts of the DIVE COMPUTER in the printed version of the enclosure. This is cheap and will help you avoid assembly problems. The parts can be slightly larger or smaller. You may simply have wires and connections that are too long. We strongly recommend using 3D printing before final assembly.
 
     .. tabs::
+      
 
-       .. tab:: 3D Printing Sorche
+      .. tab:: Industrial format
+
+         Here is the Solidworks 2024 or higher format. The project contains everything you need to prepare data for machine and milling operations.
+         
+         v_0.1
+
+         .. figure:: /hardware/res/body_02.jpg
+            :width: 80%
+            :align: center
+
+        :download:`STEP/SAT/SOLIDWORKS_2024 files body </hardware/models/dive_computer_body_v_0_1_STEP_SAT_SOLIDWORKS.zip>`
+        
+        :download:`STEP/SAT/SOLIDWORKS_2024 files cover </hardware/models/dive_computer_cover_v_0_1_STEP_SAT_SOLIDWORKS.zip>`
+        
+        :download:`WBREP files </hardware/models/dive_computer_body_v_0_1_WBREP.zip>`
+
+      
+      .. tab:: 3D Printing Sorche
 
          Here are 3D printing files in popular formats for most known 3D Printers.
 
@@ -28,21 +46,16 @@ Working Files
         :download:`OBJ files </hardware/models/dive_computer_body_v_0_1_OBJ.zip>`
 
         :download:`STL files </hardware/models/dive_computer_body_v_0_1_STL.zip>`
-        
 
-
-       .. tab:: Industrial format
-
-         Here is the Solidworks 2024 or higher format. The project contains everything you need to prepare data for machine and milling operations.
-         
-         v_0.1
-
-         .. figure:: /hardware/res/body_02.jpg
-            :width: 80%
-            :align: center
-
-        :download:`WBREP files </hardware/models/dive_computer_body_v_0_1_WBREP.zip>`
 
 Blueprints         
 ------------------------------------
 Drawings will be updated as needed. The latest files can be found at the links above in the Working Files section.
+
+.. figure:: /hardware/res/dive_computer_body_v_0_1.jpg
+   :width: 80%
+   :align: center
+
+.. figure:: /hardware/res/dive_computer_cover_v_0_1.jpg
+   :width: 80%
+   :align: center

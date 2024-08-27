@@ -22,7 +22,7 @@ You can use any stainless steel IP68 specification piezo button with a 12mm seat
    :width: 80%
    :align: center
 
-`Button <hardware/required_parts>`_
+`Buttons IP68 <https://aliexpress.ru/item/1005003107169262.html?sku_id=12000024124060234&spm=a2g2w.productlist.search_results.12.5ae6f302LLHdFy>`_
 
 Price: 3-4$
 
