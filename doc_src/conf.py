@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Dive Computer'
-copyright = 'Copyright 2024, Alexey Vlasov, Maxim Parinov. Licensed under the Apache License, Version 2.0'
+copyright = '2024, Alexey Vlasov, Maxim Parinov. Licensed under the Apache License, Version 2.0'
 author = 'Alexey Vlasov, Maxim Parinov'
 release = 'v0.1'
 
